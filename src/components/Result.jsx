@@ -15,13 +15,15 @@ export default function Result({ scores, onRestart }) {
 
   if (!result) {
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center bg-[#fcf9f2] p-6">
+      <div className="w-full h-full flex flex-col items-center justify-center bg-[#000080] p-6 text-white font-pixel text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9InRyYW5zcGFyZW50Ii8+PHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iMiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9zdmc+')] mix-blend-overlay"></div>
         <motion.div 
           animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
-          className="w-16 h-16 border-8 border-slate-200 border-t-red-500 rounded-full mb-6"
+          transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+          className="w-16 h-16 border-4 border-dashed border-[#00ffff] rounded-full mb-6"
         />
-        <p className="text-xl font-black animate-pulse">正在提取你的隐性人格基因...</p>
+        <p className="text-xl animate-pulse text-[#00ffff] mb-2">ANALYZING DATA...</p>
+        <p className="text-sm text-[#ff00ff]">EXTRACTING PERSONALITY CORE</p>
       </div>
     );
   }
@@ -31,37 +33,38 @@ export default function Result({ scores, onRestart }) {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, type: "spring" }}
-      className="w-full h-full flex flex-col items-center bg-[#fcf9f2] p-6 relative overflow-y-auto overflow-x-hidden pb-24"
+      className="w-full h-full flex flex-col items-center bg-[#c0c0c0] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNjMGMwYzAiLz48cmVjdCB3aWR0aD0iMiIgaGVpZ2h0PSIyIiBmaWxsPSIjYjBiMGIwIi8+PC9zdmc+')] p-6 relative overflow-y-auto overflow-x-hidden pb-24"
     >
-      <div className="absolute top-0 right-0 w-64 h-64 bg-pink-200 rounded-full blur-3xl opacity-40 -translate-y-1/2 translate-x-1/4" />
-      <div className="absolute bottom-1/4 left-0 w-48 h-48 bg-purple-200 rounded-full blur-3xl opacity-30 -translate-x-1/4" />
-
-      <h2 className="text-2xl font-black text-slate-500 mt-4 mb-2 z-10">你的 PBTI 结果是</h2>
+      <h2 className="text-xl font-pixel text-[#000080] mt-4 mb-2 z-10 bg-white px-2 border border-black shadow-[2px_2px_0px_#ff00ff]">
+        [ RESULT.TXT ]
+      </h2>
       
-      <div className="w-full max-w-sm bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-6 mb-8 z-10 flex flex-col items-center relative transform rotate-1">
-        <div className="absolute -top-5 -right-5 bg-yellow-300 text-black border-4 border-black font-black px-4 py-2 rounded-full transform rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-          确诊！
+      <div className="w-full max-w-sm bg-white y2k-border-inset p-4 mb-6 z-10 flex flex-col items-center relative shadow-[6px_6px_0px_0px_#000]">
+        <div className="absolute -top-4 -left-4 bg-[#ccff00] text-black border-2 border-black font-pixel px-2 py-1 transform -rotate-6 shadow-[2px_2px_0px_0px_#000]">
+          DIAGNOSIS!
         </div>
         
-        <h1 className="text-6xl font-black text-red-500 tracking-tighter mb-2">{result.type}</h1>
-        <h3 className="text-3xl font-black mb-4">{result.title}</h3>
+        <h1 className="text-6xl font-pixel y2k-text-gradient tracking-tighter mb-2 mt-2 drop-shadow-[2px_2px_0px_#000]">{result.type}</h1>
+        <h3 className="text-2xl font-bold mb-4 font-pixel text-[#000080]">{result.title}</h3>
         
-        <div className="flex flex-wrap gap-2 justify-center mb-6">
+        <div className="flex flex-wrap gap-2 justify-center mb-4">
           {result.tags.map((tag, i) => (
-            <span key={i} className="bg-slate-100 border-2 border-black font-bold px-3 py-1 rounded-full text-sm">
+            <span key={i} className="bg-[#000080] text-white font-pixel px-2 py-1 text-xs shadow-[2px_2px_0px_#ff00ff]">
               #{tag}
             </span>
           ))}
         </div>
         
-        <p className="text-slate-700 font-medium leading-relaxed text-center text-sm mb-4">
-          {result.desc}
-        </p>
+        <div className="bg-[#c0c0c0] p-3 y2k-border-inset w-full text-center">
+          <p className="text-black font-pixel leading-relaxed text-sm">
+            {result.desc}
+          </p>
+        </div>
       </div>
 
       <div className="w-full max-w-sm flex flex-col gap-4 z-10 mt-auto">
-        <div className="bg-yellow-100 border-2 border-black rounded-xl p-3 text-center mb-1">
-           <p className="text-sm font-bold text-slate-700">想要属于你的 PBTI 照片名片？</p>
+        <div className="bg-black text-[#00ffff] border-2 border-[#ff00ff] p-2 text-center mb-1">
+           <p className="text-xs font-pixel animate-pulse">>>> 想要属于你的 Y2K 专属特效？ {'<<<'}</p>
         </div>
 
         <motion.a
@@ -70,15 +73,15 @@ export default function Result({ scores, onRestart }) {
           rel="noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full bg-[#ff4757] text-white border-4 border-black font-black text-xl py-4 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center gap-2 relative overflow-hidden"
+          className="w-full bg-[#ff00ff] text-white border-2 border-white font-pixel text-xl py-3 shadow-[4px_4px_0px_0px_#000] flex items-center justify-center gap-2 relative overflow-hidden"
         >
           <motion.div 
             animate={{ x: ["-100%", "100%"] }}
             transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
-            className="absolute top-0 left-0 w-full h-full bg-white opacity-20 skew-x-12"
+            className="absolute top-0 left-0 w-full h-full bg-white opacity-30 skew-x-12"
           />
-          <Camera size={24} />
-          去醒图搜索【PBTI】体验
+          <Camera size={20} />
+          去醒图搜索【PBTI】
         </motion.a>
 
         <div className="flex gap-4">
@@ -86,19 +89,19 @@ export default function Result({ scores, onRestart }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onRestart}
-            className="flex-1 bg-white border-4 border-black font-black py-3 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex justify-center items-center gap-2"
+            className="flex-1 y2k-metallic font-pixel py-2 flex justify-center items-center gap-2 text-sm"
           >
-            <RefreshCcw size={20} />
-            再测一次
+            <RefreshCcw size={16} />
+            REBOOT
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => alert('请截图保存此页面！')}
-            className="flex-1 bg-[#2ed573] border-4 border-black font-black py-3 rounded-xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex justify-center items-center gap-2"
+            onClick={() => alert('SYSTEM: 请截图保存此页面！')}
+            className="flex-1 bg-[#ccff00] border-2 border-black text-black font-pixel py-2 shadow-[2px_2px_0px_#000] flex justify-center items-center gap-2 text-sm"
           >
-            <Download size={20} />
-            保存截图
+            <Download size={16} />
+            SAVE.JPG
           </motion.button>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Smartphone, Search, Sparkles, HandMetal } from 'lucide-react';
+import { Smartphone, Search, Sparkles, HandMetal, Disc } from 'lucide-react';
 
 export default function Promo() {
   const containerVariants = {
@@ -29,52 +29,52 @@ export default function Promo() {
       initial="hidden"
       animate="visible"
     >
-      <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full font-bold mb-6 shadow-[4px_4px_0px_0px_rgba(255,71,87,1)]">
-        <Sparkles size={18} className="text-yellow-300" />
-        <span className="tracking-wider">全新爆款玩法现已上线</span>
+      <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 bg-[#00ffff] text-[#ff00ff] font-pixel border-2 border-[#ff00ff] mb-6 shadow-[4px_4px_0px_0px_#000]">
+        <Disc size={16} className="animate-spin" />
+        <span className="tracking-wider">CD-ROM NEW RELEASE // V1.0</span>
       </motion.div>
 
-      <motion.h1 variants={itemVariants} className="text-5xl lg:text-7xl font-black mb-6 leading-[1.1] tracking-tighter text-slate-800">
-        你的 <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-purple-600">PBTI</span> 专属特效<br />
-        现已登陆 <span className="underline decoration-wavy decoration-red-500 underline-offset-8">醒图 App</span>
+      <motion.h1 variants={itemVariants} className="text-5xl lg:text-7xl font-pixel mb-6 leading-[1.1] text-white drop-shadow-[4px_4px_0px_#ff00ff]">
+        你的 <span className="y2k-text-gradient">PBTI</span> 专属特效<br />
+        现已登陆 <span className="text-[#ccff00] underline decoration-wavy decoration-[#ff00ff] underline-offset-8">醒图 App</span>
       </motion.h1>
 
-      <motion.p variants={itemVariants} className="text-xl lg:text-2xl text-slate-600 mb-12 font-medium leading-relaxed">
-        告别无聊的传统测试！用特效秀出你的隐性抽象人格。<br />
-        <span className="text-slate-400 text-lg">（顺便，右边的小玩具可以先测测看 👉）</span>
+      <motion.p variants={itemVariants} className="text-xl lg:text-2xl text-white mb-12 font-bold leading-relaxed drop-shadow-[2px_2px_0px_#000]">
+        告别无聊的传统测试！用千禧复古风秀出你的隐性抽象人格。<br />
+        <span className="text-[#00ffff] text-lg font-pixel">{'>>'} CLICK RIGHT WINDOW TO START {'<<'}</span>
       </motion.p>
 
       <motion.div 
         variants={itemVariants} 
-        className="bg-white border-4 border-black p-6 lg:p-8 rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1 hover:rotate-0 transition-transform duration-300 relative"
+        className="y2k-border p-6 lg:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative bg-[#c0c0c0]"
       >
-        <div className="absolute -top-6 -right-6 bg-yellow-300 text-black border-4 border-black font-black px-4 py-2 rounded-full transform rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-          快速入口
+        <div className="absolute -top-4 -right-4 bg-[#ff00ff] text-white font-pixel px-3 py-1 border-2 border-black shadow-[2px_2px_0px_0px_#00ffff]">
+          NEW!
         </div>
 
-        <h3 className="text-2xl font-black mb-6 flex items-center gap-2">
-          <HandMetal size={28} className="text-red-500" />
-          如何获取同款特效？
+        <h3 className="text-2xl font-pixel mb-6 flex items-center gap-2 text-[#000080]">
+          <HandMetal size={28} className="text-[#ff00ff]" />
+          HOW TO GET IT?
         </h3>
         
-        <ul className="space-y-6 font-bold text-lg lg:text-xl text-slate-800">
-          <li className="flex items-center gap-4">
-            <div className="w-12 h-12 shrink-0 bg-red-100 rounded-full flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-              <Smartphone size={24} className="text-red-600" />
+        <ul className="space-y-4 font-bold text-lg lg:text-xl text-black">
+          <li className="flex items-center gap-4 bg-white y2k-border-inset p-2">
+            <div className="w-10 h-10 shrink-0 bg-[#c0c0c0] flex items-center justify-center border-2 border-white border-b-gray-500 border-r-gray-500">
+              <Smartphone size={20} className="text-[#ff00ff]" />
             </div>
-            <span>第一步：打开 <span className="text-red-500">醒图 App</span></span>
+            <span className="font-pixel">1. 打开 <span className="text-[#ff00ff]">醒图 App</span></span>
           </li>
-          <li className="flex items-center gap-4">
-            <div className="w-12 h-12 shrink-0 bg-yellow-100 rounded-full flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-              <Search size={24} className="text-yellow-600" />
+          <li className="flex items-center gap-4 bg-white y2k-border-inset p-2">
+            <div className="w-10 h-10 shrink-0 bg-[#c0c0c0] flex items-center justify-center border-2 border-white border-b-gray-500 border-r-gray-500">
+              <Search size={20} className="text-[#000080]" />
             </div>
-            <span>第二步：在首页搜索栏输入 <span className="bg-yellow-200 px-2 rounded-md">PBTI</span></span>
+            <span className="font-pixel">2. 搜索 <span className="bg-[#000080] text-white px-2">PBTI</span></span>
           </li>
-          <li className="flex items-center gap-4">
-            <div className="w-12 h-12 shrink-0 bg-green-100 rounded-full flex items-center justify-center border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-              <Sparkles size={24} className="text-green-600" />
+          <li className="flex items-center gap-4 bg-white y2k-border-inset p-2">
+            <div className="w-10 h-10 shrink-0 bg-[#c0c0c0] flex items-center justify-center border-2 border-white border-b-gray-500 border-r-gray-500">
+              <Sparkles size={20} className="text-[#00a800]" />
             </div>
-            <span>第三步：点击使用，开始你的发疯创作！</span>
+            <span className="font-pixel">3. 点击使用，开始发疯！</span>
           </li>
         </ul>
       </motion.div>

@@ -5,31 +5,33 @@ import { Zap } from 'lucide-react';
 export default function Home({ onStart }) {
   return (
     <motion.div 
-      className="w-full h-full flex flex-col items-center justify-center p-6 bg-[#fcf9f2]"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.5 }}
+      className="w-full h-full flex flex-col items-center justify-center p-6 bg-[#c0c0c0] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IiNjMGMwYzAiLz48cmVjdCB3aWR0aD0iMiIgaGVpZ2h0PSIyIiBmaWxsPSIjYjBiMGIwIi8+PC9zdmc+')] relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
     >
-      <div className="absolute top-10 right-10 w-20 h-20 bg-yellow-300 rounded-full blur-3xl opacity-50" />
-      <div className="absolute bottom-20 left-10 w-32 h-32 bg-red-400 rounded-full blur-3xl opacity-30" />
+      <div className="absolute top-10 right-10 w-20 h-20 bg-[#ff00ff] rounded-full blur-3xl opacity-50 mix-blend-screen" />
+      <div className="absolute bottom-20 left-10 w-32 h-32 bg-[#00ffff] rounded-full blur-3xl opacity-50 mix-blend-screen" />
 
       <motion.div 
-        className="text-center z-10"
+        className="text-center z-10 y2k-border bg-[#c0c0c0] p-6 mb-8 shadow-[4px_4px_0px_0px_#ff00ff]"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 200, damping: 10 }}
       >
-        <h2 className="text-3xl font-black mb-2 tracking-tighter text-slate-800 drop-shadow-md">
+        <div className="bg-[#000080] text-white font-pixel text-xs px-1 text-left mb-4">
+          C:\PBTI\SCAN.EXE
+        </div>
+        <h2 className="text-2xl font-pixel mb-2 text-[#ff00ff] drop-shadow-[2px_2px_0px_#fff]">
           测测你的
         </h2>
-        <h1 className="text-5xl font-black mb-8 tracking-tighter text-red-500 drop-shadow-md">
+        <h1 className="text-5xl font-pixel mb-6 y2k-text-gradient drop-shadow-[2px_2px_0px_#000]">
           隐性抽象人格
         </h1>
         
-        <div className="bg-white border-4 border-black p-4 rounded-xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12 transform -rotate-2">
-          <p className="text-lg font-bold">不知道自己是什么 PBTI？</p>
-          <p className="text-sm text-slate-500 mt-2 font-medium">只需 4 题，快速确诊！</p>
+        <div className="y2k-border-inset bg-white p-3">
+          <p className="text-sm font-bold font-pixel">SYSTEM ERROR:</p>
+          <p className="text-xs text-slate-600 mt-1 font-pixel">只需 4 题，快速确诊！</p>
         </div>
       </motion.div>
 
@@ -37,14 +39,14 @@ export default function Home({ onStart }) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={onStart}
-        className="z-10 bg-[#2ed573] border-4 border-black text-black font-black text-2xl py-4 px-10 rounded-full shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center gap-2 hover:bg-[#26bd65] transition-colors"
+        className="z-10 y2k-metallic font-pixel text-xl py-3 px-8 flex items-center gap-2"
       >
-        <Zap size={28} />
-        开始发疯
+        <Zap size={20} className="text-[#ff00ff]" />
+        [ ENTER / 开始发疯 ]
       </motion.button>
       
-      <p className="absolute bottom-6 text-xs text-slate-400 font-bold z-10">
-        * 体验版小测试，测完记得去醒图用特效哦
+      <p className="absolute bottom-6 text-[10px] text-[#ff00ff] font-pixel z-10 text-center w-full px-4 drop-shadow-[1px_1px_0px_#fff]">
+        * 体验版小测试，测完记得去醒图用特效哦 *
       </p>
     </motion.div>
   );
