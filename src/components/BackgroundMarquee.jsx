@@ -21,20 +21,27 @@ const pbtiImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
 // 提取所有结果的 title 和 type
 const personalityList = Object.values(results).map(r => `${r.type} ${r.title}`);
 
-// 为了让内容足够长，我们重复几次数据
+// 为了让内容足够长，我们重复几次数据，并分成两行
 const getRowData = () => {
-  const shuffled = [...personalityList].sort(() => Math.random() - 0.5);
+  const shuffledTop = [...personalityList].sort(() => Math.random() - 0.5);
+  const shuffledBottom = [...personalityList].sort(() => Math.random() - 0.5);
   
-  return [...shuffled, ...shuffled, ...shuffled].map((text, i) => ({
-    id: i,
-    text,
-    // 随机从真实图库中挑选一张图片
-    img: Math.random() > 0.5 ? pbtiImages[Math.floor(Math.random() * pbtiImages.length)] : null
-  }));
+  // 我们将两行文字配对成一组（一个块），然后在块之间插入大图
+  const blocks = [];
+  for (let i = 0; i < shuffledTop.length * 2; i++) {
+    blocks.push({
+      id: i,
+      textTop: shuffledTop[i % shuffledTop.length],
+      textBottom: shuffledBottom[i % shuffledBottom.length],
+      // 每隔几个块随机插入一张大图片
+      img: Math.random() > 0.4 ? pbtiImages[Math.floor(Math.random() * pbtiImages.length)] : null
+    });
+  }
+  return blocks;
 };
 
 export default function BackgroundMarquee() {
-  const rowCount = 8; // 生成 8 行弹幕
+  const rowCount = 6; // 生成 6 组“双行弹幕块”
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden bg-white flex flex-col justify-center pointer-events-none">
@@ -45,22 +52,33 @@ export default function BackgroundMarquee() {
         return (
           <div 
             key={index} 
-            className="flex py-6 whitespace-nowrap overflow-visible bg-transparent"
+            className="flex py-1 whitespace-nowrap overflow-visible bg-transparent border-b border-gray-100"
           >
-            <div className={`flex items-center gap-12 ${isReverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}>
+            <div className={`flex items-center gap-6 ${isReverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}>
               {rowData.map((item) => (
                 <React.Fragment key={item.id}>
-                  <span className="text-5xl md:text-7xl font-pixel font-bold text-gray-200 uppercase tracking-wider">
-                    {item.text}
-                  </span>
+                  {/* 两行文字的块 */}
+                  <div className="flex flex-col justify-center items-start gap-1">
+                    <span className="text-3xl md:text-5xl font-pixel font-bold text-gray-300 uppercase tracking-wider leading-none">
+                      {item.textTop}
+                    </span>
+                    <span className="text-3xl md:text-5xl font-pixel font-bold text-gray-300 uppercase tracking-wider leading-none">
+                      {item.textBottom}
+                    </span>
+                  </div>
+                  
+                  <span className="text-gray-200 text-3xl font-pixel self-center">✦</span>
+
+                  {/* 跨越两行高度的大图 */}
                   {item.img && (
                     <img 
                       src={item.img} 
                       alt="effect" 
-                      className="h-48 md:h-64 w-auto object-cover shadow-2xl relative z-10 mx-4"
+                      className="h-[4.5rem] md:h-[7.5rem] w-auto object-cover shadow-xl border-2 border-white mx-2"
                     />
                   )}
-                  <span className="text-gray-200 text-3xl font-pixel">✦</span>
+                  
+                  {item.img && <span className="text-gray-200 text-3xl font-pixel self-center">✦</span>}
                 </React.Fragment>
               ))}
             </div>
