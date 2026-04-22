@@ -39,13 +39,7 @@ export const results = {
 // 随机获取结果逻辑（因为目前题目不再是 MBTI 的四维算法，所以我们改为随机摇号/盲盒抽取，保留趣味性）
 export const getResult = (scores) => {
   const keys = Object.keys(results);
-  // 这里暂时用时间戳加一点随机数，模拟“测算”出一个结果
+  // 随机抽取一个性格
   const randomKey = keys[Math.floor(Math.random() * keys.length)];
-  return results[randomKey];
-};
-
-export const getResult = (scores) => {
-  // scores: { PS: 'P', BN: 'B', TF: 'T', IE: 'I' }
-  const typeStr = `${scores.PS || 'P'}${scores.BN || 'B'}${scores.TF || 'T'}${scores.IE || 'I'}`;
-  return results[typeStr] || results['PBTI']; // fallback
+  return results[randomKey] || results['XXDS']; // 兜底返回第一个
 };
