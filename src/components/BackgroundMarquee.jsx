@@ -1,14 +1,22 @@
 import React from 'react';
 import { results } from '../data/results';
 
-// 导入真实的 PBTI 效果图
-import img1 from '../assets/pbti/img1.jpg';
-import img2 from '../assets/pbti/img2.jpg';
-import img3 from '../assets/pbti/img3.jpg';
-import img4 from '../assets/pbti/img4.jpg';
-import img5 from '../assets/pbti/img5.jpg';
+// 导入所有真实的 PBTI 效果图
+import img1 from '../assets/pbti/20260423-005944.jpg';
+import img2 from '../assets/pbti/20260423-005947.jpg';
+import img3 from '../assets/pbti/20260423-005952.jpg';
+import img4 from '../assets/pbti/20260423-005956.jpg';
+import img5 from '../assets/pbti/20260423-005959.jpg';
+import img6 from '../assets/pbti/20260423-010002.jpg';
+import img7 from '../assets/pbti/20260423-010029.jpg';
+import img8 from '../assets/pbti/20260423-010034.jpg';
+import img9 from '../assets/pbti/20260423-010041.jpg';
+import img10 from '../assets/pbti/comfyui_task_output_3afbe48c-dc0f-4867-8431-d14e9008574e.png';
+import img11 from '../assets/pbti/comfyui_task_output_3b6c6262-c303-4ab8-bcc9-e4184e125c6f.png';
+import img12 from '../assets/pbti/comfyui_task_output_9dc3a746-de32-4456-b2ac-518e194d0571.png';
+import img13 from '../assets/pbti/comfyui_task_output_e48b57dd-40a0-480a-88aa-16c43fd7e8a1.png';
 
-const pbtiImages = [img1, img2, img3, img4, img5];
+const pbtiImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13];
 
 // 提取所有结果的 title 和 type
 const personalityList = Object.values(results).map(r => `${r.type} ${r.title}`);
