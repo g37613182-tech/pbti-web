@@ -31,7 +31,7 @@ export default function Quiz({ onFinish }) {
         </div>
         <div className="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
           <motion.div 
-            className="bg-black h-full"
+            className="bg-[#0bd055] h-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.3 }}
@@ -61,9 +61,9 @@ export default function Quiz({ onFinish }) {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => handleOptionClick(option.value, currentQuestion.dimension)}
-                className="w-full text-left p-4 bg-gray-50 rounded-2xl font-pixel text-xl text-black hover:bg-gray-100 transition-colors shadow-sm flex items-center gap-3 border border-gray-100"
+                className="w-full text-left p-4 bg-gray-50 rounded-2xl font-pixel text-xl text-black hover:bg-[#e6fcf0] transition-colors shadow-sm flex items-center gap-3 border border-gray-100 hover:border-[#0bd055]"
               >
-                <span className="text-gray-400 font-bold">[{idx + 1}]</span>
+                <span className="text-[#0bd055] font-bold">[{idx + 1}]</span>
                 {option.text}
               </motion.button>
             ))}

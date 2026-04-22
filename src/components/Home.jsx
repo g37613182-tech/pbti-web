@@ -19,15 +19,15 @@ export default function Home({ onStart }) {
           测一测你的
         </h2>
         <h1 className="text-7xl font-pixel mb-4 text-black font-bold tracking-widest">
-          "P"BTI
+          <span className="text-[#0bd055]">"P"</span>BTI
         </h1>
         <h3 className="text-3xl font-pixel mb-8 text-black font-bold">
           醒图人格
         </h3>
         
         <div className="mt-2">
-          <p className="text-lg text-black font-pixel font-bold bg-gray-100 px-6 py-3 rounded-full">
-            入口：醒图 - 玩法 - PBTI
+          <p className="text-lg text-black font-pixel font-bold bg-gray-100 px-6 py-3 rounded-full border border-gray-200">
+            入口：<span className="text-[#0bd055]">醒图</span> - 玩法 - PBTI
           </p>
         </div>
       </motion.div>
@@ -36,7 +36,7 @@ export default function Home({ onStart }) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={onStart}
-        className="z-10 bg-black text-white font-pixel font-bold text-2xl py-4 px-12 rounded-full shadow-xl hover:bg-gray-800 transition-colors"
+        className="z-10 bg-[#0bd055] text-white font-pixel font-bold text-2xl py-4 px-12 rounded-full shadow-xl hover:bg-[#09b048] transition-colors"
       >
         开始测试
       </motion.button>

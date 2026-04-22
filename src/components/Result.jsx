@@ -39,16 +39,16 @@ export default function Result({ scores, onRestart }) {
       </h2>
       
       <div className="w-full max-w-sm bg-white rounded-3xl p-6 mb-6 z-10 flex flex-col items-center relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 mt-4">
-        <div className="absolute -top-4 -left-4 bg-black text-white font-pixel px-3 py-1 transform -rotate-6 shadow-lg rounded-lg">
+        <div className="absolute -top-4 -left-4 bg-[#0bd055] text-white font-pixel px-3 py-1 transform -rotate-6 shadow-lg rounded-lg">
           DIAGNOSIS!
         </div>
         
-        <h1 className="text-6xl font-pixel text-black tracking-tighter mb-2 mt-2">{result.type}</h1>
+        <h1 className="text-6xl font-pixel text-[#0bd055] tracking-tighter mb-2 mt-2">{result.type}</h1>
         <h3 className="text-2xl font-bold mb-4 font-pixel text-gray-600">{result.title}</h3>
         
         <div className="flex flex-wrap gap-2 justify-center mb-6">
           {result.tags.map((tag, i) => (
-            <span key={i} className="bg-gray-100 text-black font-pixel px-3 py-1 text-sm rounded-full">
+            <span key={i} className="bg-[#e6fcf0] text-[#0bd055] font-pixel px-3 py-1 text-sm rounded-full">
               #{tag}
             </span>
           ))}
@@ -62,7 +62,7 @@ export default function Result({ scores, onRestart }) {
       </div>
 
       <div className="w-full max-w-sm flex flex-col gap-4 z-10 mt-auto">
-        <div className="bg-gray-100 text-black rounded-xl p-2 text-center mb-1">
+        <div className="bg-[#e6fcf0] text-[#0bd055] rounded-xl p-2 text-center mb-1">
            <p className="text-sm font-pixel font-bold">想要属于你的专属特效？</p>
         </div>
 
@@ -72,7 +72,7 @@ export default function Result({ scores, onRestart }) {
           rel="noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="w-full bg-black text-white rounded-2xl font-pixel text-2xl py-4 shadow-xl flex items-center justify-center gap-3 relative overflow-hidden hover:bg-gray-800 transition-colors"
+          className="w-full bg-[#0bd055] text-white rounded-2xl font-pixel text-2xl py-4 shadow-xl flex items-center justify-center gap-3 relative overflow-hidden hover:bg-[#09b048] transition-colors"
         >
           <Camera size={24} />
           去醒图搜索【PBTI】
