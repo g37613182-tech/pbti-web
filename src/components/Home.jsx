@@ -23,15 +23,18 @@ export default function Home({ onStart }) {
           C:\PBTI\SCAN.EXE
         </div>
         <h2 className="text-2xl font-pixel mb-2 text-[#ff00ff] drop-shadow-[2px_2px_0px_#fff]">
-          测测你的
+          测一测你的
         </h2>
-        <h1 className="text-5xl font-pixel mb-6 y2k-text-gradient drop-shadow-[2px_2px_0px_#000]">
-          隐性抽象人格
+        <h1 className="text-6xl font-pixel mb-2 y2k-text-gradient drop-shadow-[2px_2px_0px_#000]">
+          "P"BTI
         </h1>
+        <h3 className="text-2xl font-pixel mb-6 text-black font-bold">
+          醒图人格
+        </h3>
         
         <div className="y2k-border-inset bg-white p-3">
-          <p className="text-sm font-bold font-pixel">SYSTEM ERROR:</p>
-          <p className="text-xs text-slate-600 mt-1 font-pixel">只需 4 题，快速确诊！</p>
+          <p className="text-sm font-bold font-pixel">SYSTEM ENTRY:</p>
+          <p className="text-xs text-slate-600 mt-1 font-pixel font-bold bg-[#ffff00] px-2 py-1 inline-block">入口：醒图 - 玩法 - PBTI</p>
         </div>
       </motion.div>
 

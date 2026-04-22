@@ -35,12 +35,12 @@ export default function Promo() {
       </motion.div>
 
       <motion.h1 variants={itemVariants} className="text-5xl lg:text-7xl font-pixel mb-6 leading-[1.1] text-white drop-shadow-[4px_4px_0px_#ff00ff]">
-        你的 <span className="y2k-text-gradient">PBTI</span> 专属特效<br />
-        现已登陆 <span className="text-[#ccff00] underline decoration-wavy decoration-[#ff00ff] underline-offset-8">醒图 App</span>
+        你的 <span className="y2k-text-gradient">"P"BTI</span> 醒图人格<br />
+        专属特效现已登陆 <span className="text-[#ccff00] underline decoration-wavy decoration-[#ff00ff] underline-offset-8">醒图 App</span>
       </motion.h1>
 
       <motion.p variants={itemVariants} className="text-xl lg:text-2xl text-white mb-12 font-bold leading-relaxed drop-shadow-[2px_2px_0px_#000]">
-        告别无聊的传统测试！用千禧复古风秀出你的隐性抽象人格。<br />
+        告别无聊的传统测试！用千禧复古风秀出你的醒图人格。<br />
         <span className="text-[#00ffff] text-lg font-pixel">{'>>'} CLICK RIGHT WINDOW TO START {'<<'}</span>
       </motion.p>
 
