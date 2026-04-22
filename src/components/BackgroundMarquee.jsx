@@ -37,7 +37,7 @@ export default function BackgroundMarquee() {
   const rowCount = 8; // 生成 8 行弹幕
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden bg-white flex flex-col justify-center opacity-80 pointer-events-none">
+    <div className="fixed inset-0 z-0 overflow-hidden bg-white flex flex-col justify-center pointer-events-none">
       {Array.from({ length: rowCount }).map((_, index) => {
         const isReverse = index % 2 !== 0;
         const rowData = getRowData();
@@ -45,22 +45,22 @@ export default function BackgroundMarquee() {
         return (
           <div 
             key={index} 
-            className="flex border-b-[3px] border-black py-2 whitespace-nowrap overflow-hidden bg-white"
+            className="flex py-6 whitespace-nowrap overflow-visible bg-transparent"
           >
-            <div className={`flex items-center gap-6 ${isReverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}>
+            <div className={`flex items-center gap-12 ${isReverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}>
               {rowData.map((item) => (
                 <React.Fragment key={item.id}>
-                  <span className="text-4xl md:text-6xl font-pixel font-bold text-black uppercase tracking-wider">
+                  <span className="text-5xl md:text-7xl font-pixel font-bold text-gray-200 uppercase tracking-wider">
                     {item.text}
                   </span>
                   {item.img && (
                     <img 
                       src={item.img} 
                       alt="effect" 
-                      className="h-16 md:h-24 w-auto object-cover border-4 border-black shadow-[4px_4px_0px_0px_#ff00ff] transform hover:scale-110 transition-transform duration-200"
+                      className="h-48 md:h-64 w-auto object-cover shadow-2xl relative z-10 mx-4"
                     />
                   )}
-                  <span className="text-[#ff00ff] text-3xl font-pixel animate-pulse">✦</span>
+                  <span className="text-gray-200 text-3xl font-pixel">✦</span>
                 </React.Fragment>
               ))}
             </div>
