@@ -32,9 +32,10 @@ export default function Home({ onStart }) {
           醒图人格
         </h3>
         
-        <div className="y2k-border-inset bg-white p-3">
-          <p className="text-sm font-bold font-pixel">SYSTEM ENTRY:</p>
-          <p className="text-xs text-slate-600 mt-1 font-pixel font-bold bg-[#ffff00] px-2 py-1 inline-block">入口：醒图 - 玩法 - PBTI</p>
+        <div className="mt-4">
+          <p className="text-sm text-slate-800 font-pixel font-bold bg-[#ffff00] px-3 py-2 inline-block border-2 border-black shadow-[2px_2px_0px_#000]">
+            入口：醒图 - 玩法 - PBTI
+          </p>
         </div>
       </motion.div>
 
@@ -42,15 +43,11 @@ export default function Home({ onStart }) {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={onStart}
-        className="z-10 y2k-metallic font-pixel text-xl py-3 px-8 flex items-center gap-2"
+        className="z-10 y2k-metallic font-pixel text-xl py-3 px-8 flex items-center gap-2 mt-4"
       >
         <Zap size={20} className="text-[#ff00ff]" />
-        [ ENTER / 开始发疯 ]
+        [ ENTER / 开始测试 ]
       </motion.button>
-      
-      <p className="absolute bottom-6 text-[10px] text-[#ff00ff] font-pixel z-10 text-center w-full px-4 drop-shadow-[1px_1px_0px_#fff]">
-        * 体验版小测试，测完记得去醒图用特效哦 *
-      </p>
     </motion.div>
   );
 }

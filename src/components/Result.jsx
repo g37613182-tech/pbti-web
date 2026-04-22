@@ -64,7 +64,7 @@ export default function Result({ scores, onRestart }) {
 
       <div className="w-full max-w-sm flex flex-col gap-4 z-10 mt-auto">
         <div className="bg-black text-[#00ffff] border-2 border-[#ff00ff] p-2 text-center mb-1">
-           <p className="text-xs font-pixel animate-pulse">>>> 想要属于你的 Y2K 专属特效？ {'<<<'}</p>
+           <p className="text-xs font-pixel animate-pulse">&gt;&gt;&gt; 想要属于你的 Y2K 专属特效？ &lt;&lt;&lt;</p>
         </div>
 
         <motion.a

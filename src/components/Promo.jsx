@@ -40,44 +40,8 @@ export default function Promo() {
       </motion.h1>
 
       <motion.p variants={itemVariants} className="text-xl lg:text-2xl text-white mb-12 font-bold leading-relaxed drop-shadow-[2px_2px_0px_#000]">
-        告别无聊的传统测试！用千禧复古风秀出你的醒图人格。<br />
-        <span className="text-[#00ffff] text-lg font-pixel">{'>>'} CLICK RIGHT WINDOW TO START {'<<'}</span>
+        <span className="text-[#00ffff] text-xl font-pixel">{'>>'} 入口：醒图 - 玩法 - PBTI {'<<'}</span>
       </motion.p>
-
-      <motion.div 
-        variants={itemVariants} 
-        className="y2k-border p-6 lg:p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] relative bg-[#c0c0c0]"
-      >
-        <div className="absolute -top-4 -right-4 bg-[#ff00ff] text-white font-pixel px-3 py-1 border-2 border-black shadow-[2px_2px_0px_0px_#00ffff]">
-          NEW!
-        </div>
-
-        <h3 className="text-2xl font-pixel mb-6 flex items-center gap-2 text-[#000080]">
-          <HandMetal size={28} className="text-[#ff00ff]" />
-          HOW TO GET IT?
-        </h3>
-        
-        <ul className="space-y-4 font-bold text-lg lg:text-xl text-black">
-          <li className="flex items-center gap-4 bg-white y2k-border-inset p-2">
-            <div className="w-10 h-10 shrink-0 bg-[#c0c0c0] flex items-center justify-center border-2 border-white border-b-gray-500 border-r-gray-500">
-              <Smartphone size={20} className="text-[#ff00ff]" />
-            </div>
-            <span className="font-pixel">1. 打开 <span className="text-[#ff00ff]">醒图 App</span></span>
-          </li>
-          <li className="flex items-center gap-4 bg-white y2k-border-inset p-2">
-            <div className="w-10 h-10 shrink-0 bg-[#c0c0c0] flex items-center justify-center border-2 border-white border-b-gray-500 border-r-gray-500">
-              <Search size={20} className="text-[#000080]" />
-            </div>
-            <span className="font-pixel">2. 搜索 <span className="bg-[#000080] text-white px-2">PBTI</span></span>
-          </li>
-          <li className="flex items-center gap-4 bg-white y2k-border-inset p-2">
-            <div className="w-10 h-10 shrink-0 bg-[#c0c0c0] flex items-center justify-center border-2 border-white border-b-gray-500 border-r-gray-500">
-              <Sparkles size={20} className="text-[#00a800]" />
-            </div>
-            <span className="font-pixel">3. 点击使用，开始发疯！</span>
-          </li>
-        </ul>
-      </motion.div>
     </motion.div>
   );
 }
