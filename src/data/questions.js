@@ -42,5 +42,16 @@ export const questions = [
       { text: "直接发！配上一句极度文艺但不知所云的文案", value: "I", label: "谜语" },
       { text: "立刻私聊发给三个闺蜜/兄弟：“快去给我点赞评论！”", value: "E", label: "讨赞" }
     ]
+  },
+  {
+    id: 5,
+    dimension: 'JP', // 新增维度
+    question: "当你修完一张绝美自拍，但发现背后的墙被你 P 歪了，你会？",
+    options: [
+      { text: "假装那是空间扭曲的艺术，直接发！", value: "J", label: "自信" },
+      { text: "撤回重修，哪怕再花半小时也要把墙拉直", value: "P", label: "完美" },
+      { text: "找个可爱的贴纸或者涂鸦把歪掉的墙挡住", value: "J", label: "机智" },
+      { text: "发圈并配文：墙歪了是因为我美丽的气场太强", value: "P", label: "戏精" }
+    ]
   }
 ];
