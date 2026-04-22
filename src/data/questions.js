@@ -1,46 +1,46 @@
 export const questions = [
   {
     id: 1,
-    dimension: 'PS', // P or S
-    question: "当你在朋友圈发了一张自拍，5分钟过去了一个赞都没有，你会？",
+    dimension: 'PS', // P图风格
+    question: "好不容易出去玩拍了一张大合照，但发现站在边缘的自己脸被拉宽了，你会？",
     options: [
-      { text: "立刻删掉，并陷入深深的自我怀疑", value: "P", label: "破防 (P)" },
-      { text: "顺手给自己点个赞，然后开始私聊发给朋友要求点赞", value: "S", label: "社牛 (S)" },
-      { text: "无所谓，反正我是发给自己看的（其实心里还是有点在意）", value: "P", label: "破防 (P)" },
-      { text: "直接在评论区发疯：为什么没人理我！！", value: "S", label: "社牛 (S)" }
+      { text: "只管把自己的脸 P 到极致，其他人不管死活", value: "P", label: "独美" },
+      { text: "把所有人都精修一遍，连路人的痘痘都给磨掉", value: "S", label: "劳模" },
+      { text: "直接把脸截掉，或者打上一个巨大的马赛克", value: "P", label: "逃避" },
+      { text: "算了，直接发，原图直出主打一个松弛感", value: "S", label: "摆烂" }
     ]
   },
   {
     id: 2,
-    dimension: 'BN', // B or N
-    question: "周末你正在睡觉，老板突然在工作群里@所有人说要开个短会，你此时的状态是？",
+    dimension: 'BN', // 拍照状态
+    question: "当朋友举起手机突然对准你喊：“看镜头！3，2，1！”，你的第一反应是？",
     options: [
-      { text: "在心里痛骂一万句，然后回复：好的收到老板～", value: "B", label: "暴躁 (B)" },
-      { text: "直接装死，假装没看到，等星期一再说", value: "N", label: "佛系 (N)" },
-      { text: "截图发到吐槽群，并配上十几个问号", value: "B", label: "暴躁 (B)" },
-      { text: "立刻坐起，甚至开始思考怎么在会上表现自己", value: "N", label: "脑补 (N)" }
+      { text: "大脑瞬间空白，只能尴尬地比出一个 ✌️", value: "B", label: "失忆" },
+      { text: "秒切营业状态，下巴微收，眼神迷离，完美定格", value: "N", label: "戏精" },
+      { text: "立刻捂住脸大喊：别拍别拍！我没洗头！", value: "B", label: "社恐" },
+      { text: "做个极度扭曲的鬼脸，谁也别想拍到我正常的丑照", value: "N", label: "疯批" }
     ]
   },
   {
     id: 3,
-    dimension: 'TF', // T or F
-    question: "如果有一天你醒来，发现自己变成了一只水豚（卡皮巴拉），你会做什么？",
+    dimension: 'TF', // 审美偏好
+    question: "如果你获得了一个可以瞬间让照片变美的超能力，你最想用来干嘛？",
     options: [
-      { text: "谁惹我我就咬谁，主打一个物理输出", value: "T", label: "抬杠 (T)" },
-      { text: "太好了，终于可以光明正大地发呆和摆烂了", value: "F", label: "发呆 (F)" },
-      { text: "先分析一下变成水豚的科学依据，并尝试找回人类身体", value: "T", label: "推理 (T)" },
-      { text: "跑去动物园应聘，混吃混喝", value: "F", label: "发疯 (F)" }
+      { text: "一键消除所有废片里的双下巴、眼袋和副乳", value: "T", label: "细节" },
+      { text: "无脑加上高斯模糊和胶片漏光，复古氛围拉满", value: "F", label: "氛围" },
+      { text: "给自己 P 上八块腹肌/超模大长腿，直接逆天改命", value: "T", label: "造假" },
+      { text: "把背景里的路人全部变成水豚或者外星人", value: "F", label: "抽象" }
     ]
   },
   {
     id: 4,
-    dimension: 'IE', // I or E
-    question: "路上遇到一个半熟不熟的同事迎面走来，你的反应是？",
+    dimension: 'IE', // 发图心态
+    question: "经过两个小时的奋战，你终于 P 完了一组九宫格神图，发朋友圈之前你会想什么？",
     options: [
-      { text: "立刻掏出手机假装回消息，完美错过", value: "I", label: "隐身 (I)" },
-      { text: "大老远就挥手大喊：“嗨！吃了吗你！”", value: "E", label: "显眼 (E)" },
-      { text: "突然转身假装看路边的树叶，直到他走远", value: "I", label: "自闭 (I)" },
-      { text: "冲上去给他讲一个刚刚看到的冷笑话", value: "E", label: "恶心人 (E)" }
+      { text: "设为仅自己可见，欣赏十分钟后再偷偷公开", value: "I", label: "暗爽" },
+      { text: "反复放大检查 100 遍，生怕背景的电线杆被我 P 歪了", value: "E", label: "强迫" },
+      { text: "直接发！配上一句极度文艺但不知所云的文案", value: "I", label: "谜语" },
+      { text: "立刻私聊发给三个闺蜜/兄弟：“快去给我点赞评论！”", value: "E", label: "讨赞" }
     ]
   }
 ];
