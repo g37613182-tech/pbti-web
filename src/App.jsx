@@ -3,6 +3,7 @@ import Promo from './components/Promo';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
+import BackgroundMarquee from './components/BackgroundMarquee';
 
 function App() {
   const [currentStep, setCurrentStep] = useState('home'); // 'home', 'quiz', 'result'
@@ -26,6 +27,9 @@ function App() {
   return (
     <div className="min-h-screen w-full flex flex-col lg:flex-row text-slate-800 overflow-x-hidden relative">
       
+      {/* 新增的滚动弹幕背景 */}
+      <BackgroundMarquee />
+
       {/* 飘屏/滚动字幕特效 */}
       <div className="absolute top-0 left-0 w-full bg-[#00ffff] text-[#ff00ff] font-pixel text-xl py-1 overflow-hidden z-50 border-b-4 border-[#ff00ff]">
         <div className="whitespace-nowrap animate-[marquee_10s_linear_infinite] font-bold">
