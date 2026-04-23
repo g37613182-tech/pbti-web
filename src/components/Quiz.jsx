@@ -7,7 +7,9 @@ export default function Quiz({ onFinish }) {
   const [scores, setScores] = useState({});
 
   const handleOptionClick = (value, dimension) => {
-    const newScores = { ...scores, [dimension]: value };
+    // 累加对应维度的得分
+    const currentScore = scores[dimension] || 0;
+    const newScores = { ...scores, [dimension]: currentScore + value };
     setScores(newScores);
 
     setTimeout(() => {
