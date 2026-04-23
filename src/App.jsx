@@ -56,7 +56,7 @@ function App() {
             <X size={20} />
           </button>
 
-          <div className="flex-1 overflow-y-auto relative rounded-2xl custom-scrollbar">
+          <div className="flex-1 flex flex-col overflow-y-auto relative rounded-2xl custom-scrollbar">
             {currentStep === 'intro' && <Intro onNext={beginQuiz} />}
             {currentStep === 'quiz' && <Quiz onFinish={finishQuiz} />}
             {currentStep === 'result' && <Result scores={scores} onRestart={restartQuiz} />}

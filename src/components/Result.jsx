@@ -17,7 +17,7 @@ export default function Result({ scores, onRestart }) {
 
   if (analyzing) {
     return (
-      <div className="w-full h-full flex flex-col items-center justify-center bg-transparent p-6 text-black font-pixel text-center relative overflow-hidden">
+      <div className="w-full flex-1 flex flex-col items-center justify-center bg-transparent p-6 text-black font-pixel text-center relative overflow-hidden">
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
@@ -34,7 +34,7 @@ export default function Result({ scores, onRestart }) {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, type: "spring" }}
-      className="w-full h-full flex flex-col items-center justify-center bg-transparent p-6 relative overflow-y-auto overflow-x-hidden"
+      className="w-full flex-1 flex flex-col items-center justify-center bg-transparent p-6 relative overflow-y-auto overflow-x-hidden"
     >
       <div className="w-full max-w-sm bg-white rounded-3xl p-8 mb-6 z-10 flex flex-col items-center relative shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100">
         <div className="absolute -top-4 -left-4 bg-[#0bd055] text-white font-pixel px-3 py-1 transform -rotate-6 shadow-lg rounded-lg">

@@ -25,7 +25,7 @@ export default function Quiz({ onFinish }) {
   const progress = ((currentIndex + 1) / questions.length) * 100;
 
   return (
-    <div className="w-full h-full flex flex-col bg-transparent p-6 relative overflow-hidden">
+    <div className="w-full flex-1 flex flex-col bg-transparent p-6 relative overflow-hidden">
       <div className="w-full max-w-md mx-auto mb-6 mt-2 z-10">
         <div className="flex justify-between text-sm font-pixel mb-2 text-gray-500">
           <span>{currentIndex + 1} / {questions.length}</span>
