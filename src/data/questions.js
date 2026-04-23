@@ -7,7 +7,7 @@ export const questions = [
       { text: "把所有人都精修一遍，连路人的痘痘都给磨掉", value: 2, label: "细节" },
       { text: "只管把自己的脸 P 到极致，其他人不管死活", value: 0, label: "独美" },
       { text: "直接发！配上搞笑贴纸把自己的脸遮住", value: -1, label: "搞怪" },
-      { text: "看着变形的脸陷入沉思，然后决定这图不发了", value: -3, label: "放弃" }
+      { text: "不发了", value: -3, label: "放弃" }
     ]
   },
   {
@@ -51,7 +51,7 @@ export const questions = [
       { text: "撤回重修，哪怕再花半小时也要把墙拉直", value: 2, label: "完美" },
       { text: "找个可爱的贴纸或者涂鸦把歪掉的墙挡住", value: 0, label: "机智" },
       { text: "发圈并配文：墙歪了是因为我美丽的气场太强", value: -1, label: "戏精" },
-      { text: "太麻烦了，这图我直接不发了！", value: -3, label: "摆烂" }
+      { text: "不发了", value: -3, label: "摆烂" }
     ]
   },
   {
