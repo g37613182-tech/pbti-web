@@ -1,45 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export default function Home({ onStart }) {
+export default function Home() {
   return (
     <motion.div 
-      className="w-full h-full flex flex-col items-center justify-center p-6 relative bg-transparent"
+      className="absolute inset-0 flex flex-col items-center justify-center p-6 z-10 pointer-events-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
       <motion.div 
-        className="text-center z-10 flex flex-col items-center justify-center mb-12"
+        className="text-center flex flex-col items-center justify-center drop-shadow-2xl"
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 200, damping: 10 }}
       >
-        <h2 className="text-3xl font-pixel mb-2 text-black">
-          测一测你的
-        </h2>
-        <h1 className="text-7xl font-pixel mb-4 text-black font-bold tracking-widest">
+        <h1 className="text-[8rem] md:text-[12rem] font-pixel mb-4 text-black font-bold tracking-widest leading-none" style={{ textShadow: '4px 4px 0 #fff, -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff' }}>
           <span className="text-[#0bd055]">"P"</span>BTI
         </h1>
-        <h3 className="text-3xl font-pixel mb-8 text-black font-bold">
-          醒图人格
-        </h3>
+        <h2 className="text-4xl md:text-6xl font-pixel mb-12 text-black font-bold" style={{ textShadow: '2px 2px 0 #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff' }}>
+          测一测你的醒图人格
+        </h2>
         
-        <div className="mt-2">
-          <p className="text-lg text-black font-pixel font-bold bg-gray-100 px-6 py-3 rounded-full border border-gray-200">
+        <div className="mt-4 pointer-events-auto cursor-default">
+          <p className="text-2xl text-black font-pixel font-bold bg-white px-8 py-4 rounded-full border-4 border-black shadow-[6px_6px_0px_0px_#0bd055]">
             入口：<span className="text-[#0bd055]">醒图</span> - 玩法 - PBTI
           </p>
         </div>
       </motion.div>
-
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={onStart}
-        className="z-10 bg-[#0bd055] text-white font-pixel font-bold text-2xl py-4 px-12 rounded-full shadow-xl hover:bg-[#09b048] transition-colors"
-      >
-        开始测试
-      </motion.button>
     </motion.div>
   );
 }

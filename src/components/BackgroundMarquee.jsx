@@ -40,11 +40,11 @@ const getRowData = () => {
   return blocks;
 };
 
-export default function BackgroundMarquee() {
+export default function BackgroundMarquee({ onStart, isClickable }) {
   const rowCount = 6; // 生成 6 组“双行弹幕块”
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden bg-white flex flex-col justify-center pointer-events-none">
+    <div className={`fixed inset-0 z-0 overflow-hidden bg-white flex flex-col justify-center ${isClickable ? '' : 'pointer-events-none'}`}>
       {Array.from({ length: rowCount }).map((_, index) => {
         const isReverse = index % 2 !== 0;
         const rowData = getRowData();
@@ -52,33 +52,34 @@ export default function BackgroundMarquee() {
         return (
           <div 
             key={index} 
-            className="flex py-1 whitespace-nowrap overflow-visible bg-transparent border-b border-gray-100"
+            className={`marquee-row flex py-1 whitespace-nowrap overflow-visible bg-transparent border-b border-gray-100 ${isClickable ? 'is-clickable group cursor-pointer' : ''}`}
+            onClick={isClickable ? onStart : undefined}
           >
             <div className={`flex items-center gap-6 ${isReverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}>
               {rowData.map((item) => (
                 <React.Fragment key={item.id}>
                   {/* 两行文字的块 */}
                   <div className="flex flex-col justify-center items-start gap-1">
-                    <span className="text-3xl md:text-5xl font-pixel font-bold text-gray-300 uppercase tracking-wider leading-none">
+                    <span className={`text-3xl md:text-5xl font-pixel font-bold text-gray-300 uppercase tracking-wider leading-none transition-colors duration-300 ${isClickable ? 'group-hover:text-[#0bd055]' : ''}`}>
                       {item.textTop}
                     </span>
-                    <span className="text-3xl md:text-5xl font-pixel font-bold text-gray-300 uppercase tracking-wider leading-none">
+                    <span className={`text-3xl md:text-5xl font-pixel font-bold text-gray-300 uppercase tracking-wider leading-none transition-colors duration-300 ${isClickable ? 'group-hover:text-[#0bd055]' : ''}`}>
                       {item.textBottom}
                     </span>
                   </div>
                   
-                  <span className="text-gray-200 text-3xl font-pixel self-center">✦</span>
+                  <span className={`text-gray-200 text-3xl font-pixel self-center transition-colors duration-300 ${isClickable ? 'group-hover:text-[#0bd055]' : ''}`}>✦</span>
 
                   {/* 跨越两行高度的大图 */}
                   {item.img && (
                     <img 
                       src={item.img} 
                       alt="effect" 
-                      className="h-[4.5rem] md:h-[7.5rem] w-auto object-cover shadow-xl border-2 border-white mx-2"
+                      className={`h-[4.5rem] md:h-[7.5rem] w-auto object-cover shadow-xl border-2 border-white mx-2 transition-colors duration-300 ${isClickable ? 'group-hover:border-[#0bd055]' : ''}`}
                     />
                   )}
                   
-                  {item.img && <span className="text-gray-200 text-3xl font-pixel self-center">✦</span>}
+                  {item.img && <span className={`text-gray-200 text-3xl font-pixel self-center transition-colors duration-300 ${isClickable ? 'group-hover:text-[#0bd055]' : ''}`}>✦</span>}
                 </React.Fragment>
               ))}
             </div>
