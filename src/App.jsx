@@ -45,7 +45,7 @@ function App() {
 
       {/* 居中的互动测试区，纯净白底 */}
       {currentStep !== 'home' && (
-        <div className="w-full max-w-md h-auto max-h-[95vh] min-h-[650px] relative z-10 flex flex-col bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-6 pt-14">
+        <div className="w-[95%] sm:w-full max-w-md h-auto max-h-[95vh] min-h-[80vh] sm:min-h-[650px] relative z-10 flex flex-col bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-4 sm:p-6 pt-14">
           
           {/* 返回主页的关闭按钮 */}
           <button 

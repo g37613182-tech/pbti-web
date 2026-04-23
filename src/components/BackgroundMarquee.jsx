@@ -21,14 +21,15 @@ const pbtiImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
 // 提取所有结果的 title 和 type
 const personalityList = Object.values(results).map(r => `${r.type} ${r.title}`);
 
-// 为了让内容足够长，我们重复几次数据，并分成两行
+// 为了让内容足够长以铺满大屏幕，我们增加重复次数，保证内容在 translateX(-50%) 时能覆盖全屏
 const getRowData = () => {
   const shuffledTop = [...personalityList].sort(() => Math.random() - 0.5);
   const shuffledBottom = [...personalityList].sort(() => Math.random() - 0.5);
   
   // 我们将两行文字配对成一组（一个块），然后在块之间插入大图
+  // 为了防止大屏幕留白，把生成块的数量扩大到原来的 3 倍
   const blocks = [];
-  for (let i = 0; i < shuffledTop.length * 2; i++) {
+  for (let i = 0; i < shuffledTop.length * 6; i++) {
     blocks.push({
       id: i,
       textTop: shuffledTop[i % shuffledTop.length],
@@ -41,10 +42,10 @@ const getRowData = () => {
 };
 
 export default function BackgroundMarquee({ onStart, isClickable }) {
-  const rowCount = 6; // 生成 6 组“双行弹幕块”
+  const rowCount = 8; // 生成 8 组“双行弹幕块”以适配高分辨率大屏
 
   return (
-    <div className={`fixed inset-0 z-0 overflow-hidden bg-white flex flex-col justify-center ${isClickable ? '' : 'pointer-events-none'}`}>
+    <div className={`fixed inset-0 z-0 overflow-hidden bg-white flex flex-col justify-evenly ${isClickable ? '' : 'pointer-events-none'}`}>
       {Array.from({ length: rowCount }).map((_, index) => {
         const isReverse = index % 2 !== 0;
         const rowData = getRowData();
@@ -52,7 +53,7 @@ export default function BackgroundMarquee({ onStart, isClickable }) {
         return (
           <div 
             key={index} 
-            className={`marquee-row flex py-1 whitespace-nowrap overflow-visible bg-transparent border-b border-gray-100 ${isClickable ? 'is-clickable group cursor-pointer' : ''}`}
+            className={`marquee-row flex py-2 whitespace-nowrap overflow-visible bg-transparent border-b border-gray-50 ${isClickable ? 'is-clickable group cursor-pointer' : ''}`}
             onClick={isClickable ? onStart : undefined}
           >
             <div className={`flex items-center gap-6 ${isReverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}>
