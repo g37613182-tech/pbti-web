@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import Home from './components/Home';
+import Intro from './components/Intro';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
 import BackgroundMarquee from './components/BackgroundMarquee';
 
 function App() {
-  const [currentStep, setCurrentStep] = useState('home'); // 'home', 'quiz', 'result'
+  const [currentStep, setCurrentStep] = useState('home'); // 'home', 'intro', 'quiz', 'result'
   const [scores, setScores] = useState({});
 
   const startQuiz = () => {
-    setCurrentStep('quiz');
+    setCurrentStep('intro');
     setScores({});
+  };
+
+  const beginQuiz = () => {
+    setCurrentStep('quiz');
   };
 
   const finishQuiz = (finalScores) => {
@@ -36,8 +41,9 @@ function App() {
       {currentStep !== 'home' && (
         <div className="w-full max-w-md h-[750px] max-h-[85vh] relative z-10 flex flex-col bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-6">
           <div className="flex-1 overflow-y-auto relative rounded-2xl">
+            {currentStep === 'intro' && <Intro onNext={beginQuiz} />}
             {currentStep === 'quiz' && <Quiz onFinish={finishQuiz} />}
-            {currentStep === 'result' && <Result onRestart={restartQuiz} />}
+            {currentStep === 'result' && <Result scores={scores} onRestart={restartQuiz} />}
           </div>
         </div>
       )}
