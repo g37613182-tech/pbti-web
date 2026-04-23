@@ -7,7 +7,7 @@ export const questions = [
       { text: "把所有人都精修一遍，连路人的痘痘都给磨掉", value: 2, label: "细节" },
       { text: "只管把自己的脸 P 到极致，其他人不管死活", value: 0, label: "独美" },
       { text: "直接发！配上搞笑贴纸把自己的脸遮住", value: -1, label: "搞怪" },
-      { text: "算了，直接发，原图直出主打一个松弛感", value: -2, label: "真实" }
+      { text: "看着变形的脸陷入沉思，然后决定这图不发了", value: -3, label: "放弃" }
     ]
   },
   {
