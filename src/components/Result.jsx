@@ -23,8 +23,8 @@ export default function Result({ scores, onRestart }) {
           transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
           className="w-16 h-16 border-4 border-dashed border-[#0bd055] rounded-full mb-6"
         />
-        <p className="text-xl animate-pulse text-black mb-2">ANALYZING DATA...</p>
-        <p className="text-sm text-gray-500">生成隐性人格中...</p>
+        <p className="text-xl animate-pulse text-black mb-2">ANALYZING...</p>
+        <p className="text-sm text-gray-500 tracking-widest">分析中</p>
       </div>
     );
   }
