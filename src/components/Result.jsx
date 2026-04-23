@@ -41,7 +41,7 @@ export default function Result({ scores, onRestart }) {
           GENERATED!
         </div>
         
-        <h3 className="text-2xl font-bold mb-4 font-pixel text-gray-600 mt-2">经文字测试，你的醒图人格是</h3>
+        <h3 className="text-2xl font-bold mb-4 font-pixel text-gray-600 mt-2">你的醒图人格可能是</h3>
         <h1 className="text-6xl font-pixel text-[#0bd055] tracking-tighter mb-2 animate-bounce">{result.type}</h1>
         <h2 className="text-3xl font-bold mb-6 font-pixel text-black">{result.title}</h2>
         
@@ -54,7 +54,7 @@ export default function Result({ scores, onRestart }) {
 
       <div className="w-full max-w-sm flex flex-col gap-4 z-10">
         <div className="bg-[#e6fcf0] text-[#0bd055] rounded-xl p-2 text-center mb-1">
-           <p className="text-sm font-pixel font-bold">但这只是文字测验！去醒图上传图片测出你最真实的人格 👇</p>
+           <p className="text-sm font-pixel font-bold">去醒图上传图片获得更准分析 👇</p>
         </div>
 
         <motion.a
@@ -66,7 +66,7 @@ export default function Result({ scores, onRestart }) {
           className="w-full bg-[#0bd055] text-white rounded-2xl font-pixel text-2xl py-4 shadow-xl flex items-center justify-center gap-3 relative overflow-hidden hover:bg-[#09b048] transition-colors"
         >
           <Camera size={28} />
-          去醒图 APP 测真实人格
+          醒图APP传送门
         </motion.a>
 
         <motion.button

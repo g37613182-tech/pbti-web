@@ -25,6 +25,11 @@ function App() {
   };
 
   const restartQuiz = () => {
+    setCurrentStep('intro');
+    setScores({});
+  };
+
+  const returnHome = () => {
     setCurrentStep('home');
     setScores({});
   };
@@ -44,7 +49,7 @@ function App() {
           
           {/* 返回主页的关闭按钮 */}
           <button 
-            onClick={restartQuiz}
+            onClick={returnHome}
             className="absolute top-4 right-4 text-gray-400 hover:text-[#0bd055] hover:bg-[#e6fcf0] transition-colors z-50 bg-gray-50 p-2 rounded-full border border-gray-100"
             title="返回主页"
           >
