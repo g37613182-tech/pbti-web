@@ -51,7 +51,7 @@ export const questions = [
       { text: "撤回重修，哪怕再花半小时也要把墙拉直", value: 2, label: "完美" },
       { text: "找个可爱的贴纸或者涂鸦把歪掉的墙挡住", value: 0, label: "机智" },
       { text: "发圈并配文：墙歪了是因为我美丽的气场太强", value: -1, label: "戏精" },
-      { text: "假装那是空间扭曲的艺术，直接发！", value: -2, label: "自信" }
+      { text: "太麻烦了，这图我直接不发了！", value: -3, label: "摆烂" }
     ]
   },
   {
