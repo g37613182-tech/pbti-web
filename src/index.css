@@ -19,7 +19,20 @@ body {
   font-family: 'VT323', monospace;
 }
 
-/* 弹幕背景滚动动画 - 速度调慢 */
+/* 隐藏默认滚动条但保持可滚动 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
 @keyframes marquee-left {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

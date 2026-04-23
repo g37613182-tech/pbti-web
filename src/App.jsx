@@ -39,8 +39,8 @@ function App() {
 
       {/* 居中的互动测试区，纯净白底 */}
       {currentStep !== 'home' && (
-        <div className="w-full max-w-md h-[750px] max-h-[85vh] relative z-10 flex flex-col bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-6">
-          <div className="flex-1 overflow-y-auto relative rounded-2xl">
+        <div className="w-full max-w-md h-auto max-h-[95vh] min-h-[650px] relative z-10 flex flex-col bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-6">
+          <div className="flex-1 overflow-y-auto relative rounded-2xl custom-scrollbar">
             {currentStep === 'intro' && <Intro onNext={beginQuiz} />}
             {currentStep === 'quiz' && <Quiz onFinish={finishQuiz} />}
             {currentStep === 'result' && <Result scores={scores} onRestart={restartQuiz} />}
