@@ -12,11 +12,10 @@ export default function Intro({ onNext }) {
       <div className="mb-12">
         <span className="text-7xl mb-6 block animate-bounce">🎉</span>
         <h2 className="text-4xl font-bold font-pixel text-[#0bd055] leading-relaxed mb-6">
-          竟然被你发现了小彩蛋！
+          你发现了一个彩蛋！
         </h2>
         <p className="text-xl text-gray-600 font-pixel leading-loose">
-          既然来了，不如来做个额外的趣味测验吧？<br/>
-          只需 5 道题，测出你的隐性人格！
+          这是一个额外的小测试，仅供娱乐
         </p>
       </div>
 
@@ -26,7 +25,7 @@ export default function Intro({ onNext }) {
         onClick={onNext}
         className="w-full max-w-xs bg-[#0bd055] text-white font-pixel font-bold text-2xl py-4 rounded-2xl shadow-xl hover:bg-[#09b048] transition-colors"
       >
-        接受挑战
+        开始测试
       </motion.button>
     </motion.div>
   );
