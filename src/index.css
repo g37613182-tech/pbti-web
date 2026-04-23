@@ -14,9 +14,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 像素字体样式类，加入中文字体 fallback，解决 Windows 字体发虚和错乱问题 */
+/* 像素字体样式类，使用更方正的系统级黑体作为中文 fallback */
 .font-pixel {
-  font-family: 'VT323', 'ZCOOL KuaiLe', 'Microsoft YaHei', monospace, sans-serif;
+  font-family: 'VT323', 'PingFang SC', 'Microsoft YaHei', 'SimHei', monospace, sans-serif;
 }
 
 /* 隐藏默认滚动条但保持可滚动 */
@@ -44,9 +44,9 @@ body {
 }
 
 .animate-marquee-left {
-  animation: marquee-left 60s linear infinite;
+  animation: marquee-left 240s linear infinite;
 }
 
 .animate-marquee-right {
-  animation: marquee-right 60s linear infinite;
+  animation: marquee-right 240s linear infinite;
 }
