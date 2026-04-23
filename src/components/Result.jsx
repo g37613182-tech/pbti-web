@@ -58,7 +58,7 @@ export default function Result({ scores, onRestart }) {
         </div>
 
         <motion.a
-          href="https://www.xingtu.com/" // 替换为真实的醒图深层链接或活动页
+          href="https://m.retouchpics.com/common/topic_share_new?topic_id=7628637828582280473&share_sec_uid=MS4wLjABAAAARhhvohtym6jq_v2EMIN7GGJZCKD1n_9NGkadDDGpMS8EUZ0RkjCDCqzHgMLl_8yk&share_way=system&scene=copy_link"
           target="_blank"
           rel="noreferrer"
           whileHover={{ scale: 1.05 }}
