@@ -22,11 +22,16 @@ export default function Home() {
           测一测你的醒图人格
         </h2>
         
-        <div className="mt-4 cursor-default">
-          <p className="text-2xl text-black font-pixel font-bold bg-white px-8 py-4 rounded-full border-4 border-black shadow-[6px_6px_0px_0px_#0bd055]">
+        <a 
+          href="https://m.retouchpics.com/common/topic_share_new?topic_id=7628637828582280473&share_sec_uid=MS4wLjABAAAARhhvohtym6jq_v2EMIN7GGJZCKD1n_9NGkadDDGpMS8EUZ0RkjCDCqzHgMLl_8yk&share_way=system&scene=copy_link"
+          target="_blank"
+          rel="noreferrer"
+          className="mt-4 cursor-pointer hover:scale-105 transition-transform active:scale-95"
+        >
+          <p className="text-2xl text-black font-pixel font-bold bg-white px-8 py-4 rounded-full border-4 border-black shadow-[6px_6px_0px_0px_#0bd055] hover:shadow-[4px_4px_0px_0px_#0bd055] transition-shadow">
             入口：<span className="text-[#0bd055]">醒图</span> - 玩法 - PBTI
           </p>
-        </div>
+        </a>
       </motion.div>
     </motion.div>
   );
