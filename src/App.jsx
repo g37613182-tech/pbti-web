@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { X } from 'lucide-react';
 import Home from './components/Home';
 import Intro from './components/Intro';
 import Quiz from './components/Quiz';
@@ -39,7 +40,17 @@ function App() {
 
       {/* 居中的互动测试区，纯净白底 */}
       {currentStep !== 'home' && (
-        <div className="w-full max-w-md h-auto max-h-[95vh] min-h-[650px] relative z-10 flex flex-col bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-6">
+        <div className="w-full max-w-md h-auto max-h-[95vh] min-h-[650px] relative z-10 flex flex-col bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-6 pt-14">
+          
+          {/* 返回主页的关闭按钮 */}
+          <button 
+            onClick={restartQuiz}
+            className="absolute top-4 right-4 text-gray-400 hover:text-[#0bd055] hover:bg-[#e6fcf0] transition-colors z-50 bg-gray-50 p-2 rounded-full border border-gray-100"
+            title="返回主页"
+          >
+            <X size={20} />
+          </button>
+
           <div className="flex-1 overflow-y-auto relative rounded-2xl custom-scrollbar">
             {currentStep === 'intro' && <Intro onNext={beginQuiz} />}
             {currentStep === 'quiz' && <Quiz onFinish={finishQuiz} />}
